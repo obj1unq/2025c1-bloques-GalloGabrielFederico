@@ -24,6 +24,23 @@ object pepita {
 
 }
 
+object roque {
+  var rutina = {}
+  var ave = pepita
+
+  method rutina(_rutina) {
+    rutina = _rutina
+  }
+
+  method ave(_ave) {
+    ave = _ave
+  }
+  
+  method entrenar() {
+    rutina.apply(ave)
+  }
+}
+
 object alpiste {
   method energiaQueAporta() = 20
 }
@@ -33,7 +50,7 @@ object miAsserter {
     method assertException(bloque) {
 
       try {
-        bloque.apply() //ejecuto el bloque
+        bloque.apply()  //ejecuto el bloque
         return false //no anda como espero
       }
       catch e: Exception {
